@@ -2,13 +2,17 @@
 layout: default
 title: logs
 permalink: /archived-logs/
+paginate:
+  limit: false
+  per_page: 10
+  collection: 'archived-logs'
 ---
 
 <div class="page">
-  <h1 class="page-title">archived logs</h1>
+  <h1 class="page-title">archived logs{% unless paginator.page == 1 %} - page {{ paginator.page }}{% endunless %}</h1>
 
   <div class="log-archive">
-    {% for post in site.archived-logs %}
+    {% for post in paginator.archived-logs %}
     <a href="{{ post.url }}">
       <div class="log-archive-item">
         <span class="archive-date">

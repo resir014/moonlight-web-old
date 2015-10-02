@@ -8,6 +8,10 @@
     "url": "/uploads/rules-of-starlight.txt"
   },
   {
+    "name": "Archived logs",
+    "url": "/archived-logs"
+  },
+  {
     "name": "Starmap",
     "url": "/uploads/starmap.png"
   }

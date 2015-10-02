@@ -2,6 +2,10 @@
 layout: default
 title: logs
 permalink: /logs/
+paginate:
+  limit: false
+  per_page: 10
+  category: 'logs'
 ---
 
 <div class="page">
@@ -12,8 +16,6 @@ permalink: /logs/
     <h2 class="text-center">log archives{% unless paginator.page == 1 %} - page {{ paginator.page }}{% endunless %}</h2>
 
     {% for post in paginator.posts %}
-    {% if post.layout == 'logs' %}
-    {% unless post.hidden %}
     <a href="{{ post.url }}">
       <div class="log-archive-item">
         <span class="archive-date">
@@ -27,8 +29,6 @@ permalink: /logs/
         <span class="archive-title">{{ post.title }}</span>
       </div>
     </a>
-    {% endunless %}
-    {% endif %}
     {% endfor %}
   </div>
 
