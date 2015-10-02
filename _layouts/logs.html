@@ -10,7 +10,7 @@ layout: default
     {% if post.stardate == 0 %}
       ?????
     {% else %}
-      {{ post.stardate }}
+      {{ page.stardate }}
     {% endif %}
   </time>
   {% else %}
@@ -20,7 +20,7 @@ layout: default
         {% if post.stardate == 0 %}
           ?????
         {% else %}
-          {{ post.stardate }}
+          {{ page.stardate }}
         {% endif %}
       </span>
     {% endif %}
