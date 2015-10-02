@@ -82,7 +82,7 @@ NOTE: For now it is *highly recommended* to manually deploy from the server.
 
 ```bash
 # Builds Jekyll site
-$ jekyll build -d C:/www-data/moonlight
+$ jekyll build -d "C:/www-data/moonlight"
 ```
 
 Special thanks
