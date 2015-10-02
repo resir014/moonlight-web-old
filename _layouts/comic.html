@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="comic">
+  <h1 class="comic-title">{{ page.title }}</h1>
+
+  <figure>
+    <img src="{{ site.baseurl }}/comic/{{ page.comic_id }}.png">
+
+    <figcaption class="commentary">
+        {{ content }}
+    </figcaption>
+  </figure>
+</div>

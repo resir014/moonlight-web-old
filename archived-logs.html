@@ -1,0 +1,40 @@
+---
+layout: default
+title: logs
+permalink: /archived-logs/
+---
+
+<div class="page">
+  <h1 class="page-title">archived logs</h1>
+
+  <div class="log-archive">
+    {% for post in site.archived-logs %}
+    <a href="{{ post.url }}">
+      <div class="log-archive-item">
+        <span class="archive-date">
+          STARDATE
+          {% if post.stardate == 0 %}
+            ?????
+          {% else %}
+            {{ post.stardate }}
+          {% endif %}
+        </span>
+        <span class="archive-title">{{ post.title }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <div class="pagination">
+    {% if paginator.next_page %}
+      <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    {% else %}
+      <span class="pagination-item older">Older</span>
+    {% endif %}
+    {% if paginator.previous_page %}
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    {% else %}
+      <span class="pagination-item newer">Newer</span>
+    {% endif %}
+  </div>
+</div>

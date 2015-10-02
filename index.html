@@ -1,0 +1,89 @@
+---
+layout: default
+title: Home
+---
+
+<section class="home-feature">
+  <div class="message">
+    MOONLIGHT is here! <a href="{{ site.baseurl }}/updates/welcome-to-moonlight">Read more.</a>
+  </div>
+</section>
+
+<section class="home-feature">
+  <h1>radio stream</h1>
+
+  <p>Listen to the stream:</p>
+  <ul class="radio-links">
+    <li><h2 class="radio-link"><a href="{{ site.baseurl }}/stream">MOONLIGHT radio</a></h2></li>
+    <!--li><a href="http://starlight.roadtojupiter.com/minimal.php">minimal</a></li-->
+  </ul>
+  <p>Listen on any player:</p>
+  <ul class="stream-links">
+    <!--li><a href="http://starlight.roadtojupiter.com:8000/stream_320" target="_blank">320 <span class="kbps">kbps</span></a></li-->
+    <li><a href="#" target="_blank">128 <span class="kbps">kbps</span></a></li>
+  </ul>
+</section>
+
+{% if site.categories.logs %}
+<!-- BEGIN logs -->
+<section class="home-feature">
+  <h1>latest from: logs</h1>
+  <div class="log-archive">
+    {% for post in site.categories.logs limit:3 %}
+    {% if post.layout == 'logs' %}
+    <a href="{{ post.url }}">
+      <div class="log-archive-item">
+        {% if page.date %}
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="archive-date">
+          STARDATE
+          {% if post.stardate == 0 %}
+            ?????
+          {% else %}
+            {{ post.stardate }}
+          {% endif %}
+        </time>
+        {% else %}
+          {% if page.stardate %}
+            <span class="archive-date">
+              STARDATE
+              {% if post.stardate == 0 %}
+                ?????
+              {% else %}
+                {{ post.stardate }}
+              {% endif %}
+            </span>
+          {% endif %}
+        {% endif %}
+        <span class="archive-title">{{ post.title }}</span>
+      </div>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <a class="btn-more" href="{{ site.baseurl }}/logs">view more...</a>
+</section>
+<!-- END logs -->
+{% endif %}
+
+<section class="home-feature">
+  <h1>other shenanigans</h1>
+
+  <h2>IRC</h2>
+  <p>Coming soon!</p>
+
+  {% if site.data.files %}
+  <!-- BEGIN files -->
+  <h2>files</h2>
+  <ul class="files">
+    {% for file in site.data.files limit:3 %}
+    <li>
+      <a href="{% if file.url contains 'http://' or file.url contains 'https://' %}{{ file.url }}{% else %}{{ file.url | prepend: site.baseurl }}{% endif %}" target="_blank">
+        {{ file.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="btn-more" href="{{ site.baseurl }}/files">view more...</a>
+  <!-- END files -->
+  {% endif %}
+</section>

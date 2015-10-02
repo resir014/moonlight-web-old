@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article class="logs">
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.date %}
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+    STARDATE
+    {% if post.stardate == 0 %}
+      ?????
+    {% else %}
+      {{ post.stardate }}
+    {% endif %}
+  </time>
+  {% else %}
+    {% if page.stardate %}
+      <span class="post-date">
+        STARDATE
+        {% if post.stardate == 0 %}
+          ?????
+        {% else %}
+          {{ post.stardate }}
+        {% endif %}
+      </span>
+    {% endif %}
+  {% endif %}
+  {{ content }}
+</article>

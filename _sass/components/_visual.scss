@@ -1,0 +1,74 @@
+.log-archive,
+.files {
+  text-align: left;
+}
+
+.stream-info {
+  p {
+    margin: 0;
+  }
+}
+
+.previous-tracks {
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.stream-links,
+.radio-links {
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.stream-links {
+  li {
+    display: inline-block;
+    background: #47f;
+    border-radius: 5px;
+
+    a {
+      padding: .25rem .5rem;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.radio-links {
+  display: inline-block;
+  text-align: center;
+  background: #444;
+  border-radius: 5px;
+
+  .radio-link {
+    margin: 0;
+    background: #47f;
+
+    a {
+      padding: .75rem 1rem;
+    }
+  }
+
+  li {
+    margin: 0 auto;
+
+    a {
+      display: block;
+    }
+  }
+
+  * {
+    border-radius: 5px;
+  }
+}
+
+.kbps {
+  font-size: .6em;
+}

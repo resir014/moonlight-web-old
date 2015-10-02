@@ -1,0 +1,30 @@
+---
+layout: page
+title: submit a log
+permalink: /logs/submit/
+---
+
+<form class="form-submit" action="https://getsimpleform.com/messages?form_api_token=1d5609506e072f2fc2383d571480c5f8" method="post">
+  <input type="hidden" name="redirect_to" value="{{ site.url }}{{ site.baseurl }}/logs/submit/success" />
+
+  <p>Fields marked with <span class="form-rec">*</span> are recommended. Not that they're required, but it'd definitely help us sift through the submissions.</p>
+
+  <div class="form-submit-row">
+    <label class="form-submit-label" for="form-title">Title <span class="form-rec">*</span></label>
+    <input class="form-submit-title" type="text" name="log-title" value="">
+  </div>
+
+  <div class="form-submit-row">
+    <label class="form-submit-label" for="form-title">IRC Username <span class="form-rec">*</span></label>
+    <input class="form-submit-title" type="text" name="irc-username" value="">
+  </div>
+
+  <div class="form-submit-row">
+    <label class="form-submit-label" for="">Paste your log here <span class="form-rec">(required)</span></label>
+    <textarea class="form-submit-input" rows="16" name="log-content"></textarea>
+  </div>
+
+  <div class="form-submit-row">
+    <input class="btn-submit" type="submit" value="Submit">
+  </div>
+</form>

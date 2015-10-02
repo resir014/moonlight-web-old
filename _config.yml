@@ -1,0 +1,64 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:            /:categories/:title/
+relative_permalinks:  true
+
+# Build settings
+markdown:             kramdown
+highlighter:          pygments
+
+# Setup
+title:                "MOONLIGHT"
+tagline:              "The dark side of STARLIGHT."
+url:                  "http://starlightcomic.ddns.net" # the base hostname & protocol for your site
+baseurl:              "" # the subpath of your site, e.g. "/blog"
+exclude:              ["Makefile", "Gruntfile.js", "Gemfile", "README", "LICENSE", "tasks", "node_modules", "package.json"]
+keep_files:           ["share", "uploads", ".htaccess"]
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:           _sass
+  style:              :compressed
+
+# Site authors
+author:
+  name:               "the STARLIGHT crew"
+
+# List of time zones supported in the TZ database
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:             UTC
+
+# Jekyll plugins
+gems:
+  - octopress-paginate
+
+# octopress-paginate
+pagination:
+  limit:              false
+  per_page:           1
+  permalink:          /page/:num/
+
+# Navigational menus
+nav:
+  - title: Home
+    url: /index.html
+  - title: Stream
+    url: /stream
+  - title: Logs
+    url: /logs
+  - title: Files
+    url: /files
+
+collections:
+  stuff:
+    output:           true
+    permalink:        /:path/
+  archived-logs:
+    output:           true
+    permalink:        /:collection/:path/
+  hidden_posts:
+    output:           true
+    permalink:        /:collection/:path/ #can be overriden in the file

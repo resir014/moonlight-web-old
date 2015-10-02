@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# Working variables
+REMOTE_USER=$USER
+REMOTE_SERVER=starlightcomic.ddns.net
+REMOTE_PATH=/var/www
+TMP_JEKYLL_BUILD=${HOME}/tmp/html
+PUBLIC_WWW=${REMOTE_USER}@${REMOTE_SERVER}:${REMOTE_PATH}
+
+# Echo welcome message
+echo "Starting up deploy script..."
+echo "Hello, ${REMOTE_USER}.\n"
+
+# Build website
+echo "Building Jekyll site to ${TMP_JEKYLL_BUILD}..."
+jekyll build -d $TMP_JEKYLL_BUILD
+
+# Test if jekyll build was succesfull
+RESULT=$?
+if [ $RESULT -ne 0 ]; then
+ # Exit if build failed
+ echo "Deployment failed: Jekyll build failed"
+ exit 1
+fi
+
+echo "Jekyll build successful.\n"
+
+# Tell user what will be deployed
+echo "Deploying from: $TMP_JEKYLL_BUILD"
+echo "Deploying to: $REMOTE_PATH"
+echo "\n The next few bits will require sudo.\n"
+
+# Copies the directory to the public server
+echo "\nInitializing connection to SSH server..."
+rsync -av --delete --exclude share --chmod 664 $TMP_JEKYLL_BUILD $PUBLIC_WWW
+echo "Files successfully copied.\n"
+
+# Removes the temp directory as we don't need it anymore
+echo "Removing ${TMP_JEKYLL_BUILD}..."
+rm -rf $TMP_JEKYLL_BUILD
+
+# Cleans folder permissions
+#echo "Cleaning file & folder permissions in ${REMOTE_PATH}..."
+#sudo chown -R root:remote $REMOTE_PATH
+#sudo chmod -R 775 $REMOTE_PATH
+
+echo "\nDeploy successful."
+exit

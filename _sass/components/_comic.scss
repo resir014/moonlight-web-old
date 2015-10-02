@@ -1,0 +1,25 @@
+.comic {
+  text-align: center;
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.comic-title {
+  margin-top: 0;
+
+  a {
+    color: $text-color-primary;
+  }
+}
+
+.comic-pagination {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0 .5rem;
+  }
+}
