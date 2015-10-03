@@ -47,7 +47,7 @@ Sergals. Sergals are cool.
 
 ## We hope you'll enjoy it.
 
-This server is made out of the labour of love of the STARLIGHT crew, most notably [@faintshadows](https://twitter.com/faintshadows), [@undefined](https://twitter.com/undefined), and [@resir014](https://twitter.com/resir014).
+This server is made out of the labour of love of the STARLIGHT crew, most notably [@faintshadows](https://twitter.com/faintshadows), [@hexdefined](https://twitter.com/hexdefined), and [@resir014](https://twitter.com/resir014).
 
 [^fn-wg]: You should really check out Wolfgun, though. They're pretty cool. <http://wolfgun.bandcamp.com>
 [^fn-uptime]: Not actually guaranteed.
