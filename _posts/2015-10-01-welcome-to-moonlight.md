@@ -39,7 +39,7 @@ Yeah. That's pretty much it.
 
 Our servers run the amazing, critically-acclaimed Windows Server 2003 operating system, because it won't be 悪寒ダイビング unless it's 美学 as fuck.
 
-On top of that, we occasionally stream with Winamp, because Winamp is love, and Winamp is live. Though we also use software like foobar2000, on some occasions. Either way, everything is streamed through SHOUTcast to ensure guaranteed 24/7 uptime[^fn-uptime].
+On top of that, we occasionally stream with Winamp, because Winamp is love, and Winamp is life. Though we also use software like foobar2000, on some occasions. Either way, everything is streamed through SHOUTcast to ensure guaranteed 24/7 uptime[^fn-uptime].
 
 ## And of course, sergals.
 
