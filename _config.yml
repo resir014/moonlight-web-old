@@ -11,7 +11,7 @@ highlighter:          pygments
 # Setup
 title:                "MOONLIGHT"
 tagline:              "The dark side of STARLIGHT."
-url:                  "http://starlightcomic.ddns.net" # the base hostname & protocol for your site
+url:                  "http://moonlightradio.ddns.net" # the base hostname & protocol for your site
 baseurl:              "" # the subpath of your site, e.g. "/blog"
 exclude:              ["Makefile", "Gruntfile.js", "Gemfile", "README", "LICENSE", "tasks", "node_modules", "package.json"]
 keep_files:           ["share", "uploads", ".htaccess"]
@@ -26,6 +26,12 @@ sass:
 # Site authors
 author:
   name:               "the STARLIGHT crew"
+
+# MOONLIGHT Radio
+radio:
+  url:                "moonlightradio.ddns.net"
+  port:               8000
+  stream_url:         "http://moonlightradio.ddns.net:8000/;stream/1"
 
 # List of time zones supported in the TZ database
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

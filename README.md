@@ -1,5 +1,5 @@
-starlight.ddns.net
-==================
+moonlightradio.ddns.net
+=======================
 
 The web files for starlight.ddns.net
 
@@ -28,19 +28,6 @@ Then wrap the logs inside the following tags:
 {% highlight irc %}
 # paste your chat logs here
 {% endhighlight %}
-```
-
-### Comic
-
-The following header is required for comic posts:
-
-```
----
-category: comic
-layout: comic
-title: "Comic Title Here"
-comic_id: 0 # filename inside /assets/comic, without the `.png`
----
 ```
 
 Developing
