@@ -15,11 +15,12 @@ title: Home
   <p>Listen to the stream:</p>
   <ul class="radio-links">
     <li><h2 class="radio-link"><a href="{{ site.baseurl }}/stream">MOONLIGHT radio</a></h2></li>
-    <li><a href="{{ site.radio.stream_url }}">alternate</a></li>
+    <li><a href="{{ site.baseurl }}/stream/96">alternate (low-quality)</a></li>
   </ul>
   <p>Listen on any player:</p>
   <ul class="stream-links">
-    <li><a href="http://{{ site.radio.url }}:{{ site.radio.port }}/" target="_blank">128 <span class="kbps">kbps</span></a></li>
+    <li><a href="{{ site.radio.stream_url.hq }}" target="_blank">320 <span class="kbps">kbps</span></a></li>
+    <li><a href="{{ site.radio.stream_url.lq }}" target="_blank">96 <span class="kbps">kbps</span></a></li>
   </ul>
 </section>
 
