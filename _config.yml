@@ -31,7 +31,9 @@ author:
 radio:
   url:                "moonlightradio.ddns.net"
   port:               8000
-  stream_url:         "http://moonlightradio.ddns.net:8000/;stream/1"
+  stream_url:
+    hq:               "http://moonlightradio.ddns.net:8000/stream/1/"
+    lq:               "http://moonlightradio.ddns.net:8000/stream/2/"
 
 # List of time zones supported in the TZ database
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
