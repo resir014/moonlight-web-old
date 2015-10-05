@@ -125,16 +125,16 @@ linters:
       - min-height
       - max-height
       - box-sizing
-      - padding
-      - padding-top
-      - padding-bottom
-      - padding-left
-      - padding-right
       - margin
       - margin-top
       - margin-bottom
       - margin-left
       - margin-right
+      - padding
+      - padding-top
+      - padding-bottom
+      - padding-left
+      - padding-right
       - overflow
       - overflow-x
       - overflow-y

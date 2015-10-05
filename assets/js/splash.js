@@ -18,7 +18,8 @@
     "リサフランク420 / 現代のコンピュー",
     "Nothing but vaporwave and Wolfgun.",
     "God is dead, we have killed him with vaporwave.",
-    "Sergals. That is all."
+    "Sergals. That is all.",
+    "<+Penumbra> MEMES FUEL THE WORLD"
   ];
   var rand = splash[Math.floor(Math.random() * splash.length)];
   document.getElementById("splash").innerText = rand;
