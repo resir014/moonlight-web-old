@@ -15,6 +15,7 @@
     "The dark side of STARLIGHT.",
     "Playing nothing but Wolfgun since 2015.",
     "Powered by Winamp.",
+    "Bringing you the most diverse tunes from like 5 people.",
     "リサフランク420 / 現代のコンピュー",
     "Nothing but vaporwave and Wolfgun.",
     "God is dead, we have killed him with vaporwave.",
