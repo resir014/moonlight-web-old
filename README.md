@@ -6,10 +6,8 @@ The web files for starlight.ddns.net
 Adding stuff
 ------------
 
-All comics and log posts go to the `_posts` directory. The file names should
-go as follows: `yyyy-mm-dd-comic-or-log-title-here.md`.
-
-### Logs
+All log posts go to the `_posts` directory. The file names should
+go as follows: `yyyy-mm-dd-log-title-here.md`.
 
 The following header is required for logs:
 
@@ -18,11 +16,11 @@ The following header is required for logs:
 category: logs
 layout: logs
 title: "Title here"
-stardate: 12031
+stardate: 12031 # optional
 ---
 ```
 
-Then wrap the logs inside the following tags:
+Then wrap the logs inside the following Liquid tags:
 
 ```
 {% highlight irc %}
@@ -37,9 +35,9 @@ Requirements:
 * Git
 * Ruby (v2.0.0+)
 * Bundler
-  included from within Rails (`gem install rails`) or `gem install bundler`
+  (included from within Rails (`gem install rails`) or `gem install bundler`)
 * Jekyll <http://jekyllrb.com/>
-  install from within Ruby: `gem install jekyll`
+  (install from within Ruby: `gem install jekyll`)
 
 Clone the project to your local directory.
 
@@ -50,7 +48,7 @@ $ git clone https://github.com/resir014/moonlight-web.git
 Then run this command to install all of the required Jekyll plugins:
 
 ```bash
-$ bundle install
+$ bundle
 ```
 
 Then we can run a local server from within your computer.
@@ -69,12 +67,12 @@ NOTE: For now it is *highly recommended* to manually deploy from the server.
 
 ```bash
 # Builds Jekyll site
-$ jekyll build -d "C:/www-data/moonlight"
+$ tasks/deploy-internally
 ```
 
 Special thanks
 --------------
 
-* Poole: @mdo
-* Hosting: @faintshadows
-* Design: @hexdefined, @resir014
+* Poole: [@mdo](https://twitter.com/mdo)
+* Hosting: [@AT_745](https://twitter.com/AT_745)
+* Design: [@hexdefined](https://twitter.com/hexdefined), [@resir014](https://twitter.com/resir014)
