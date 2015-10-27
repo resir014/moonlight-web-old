@@ -8,9 +8,6 @@ _drafts
 # Shared folders
 share
 
-# Rubygems
-Gemfile.lock
-
 # Numerous always-ignore extensions
 *.diff
 *.err
