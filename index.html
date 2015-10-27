@@ -3,18 +3,36 @@ layout: default
 title: Home
 ---
 
+{% if site.categories.updates %}
+<!-- BEGIN updates -->
+<section class="home-feature">
+  <div class="log-archive">
+    {% for post in site.categories.updates limit:1 %}
+    {% if post.layout == 'post' %}
+    <a href="{{ post.url }}">
+      <div class="message">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}:</time>
+        {{ post.title }}
+      </div>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+<!-- END updates -->
+{% endif %}
+
 <section class="home-feature">
   <h1>radio stream</h1>
 
   <p>Listen to the stream:</p>
   <ul class="radio-links">
     <li><h2 class="radio-link"><a href="{{ site.baseurl }}/stream">MOONLIGHT radio</a></h2></li>
-    <li><a href="{{ site.baseurl }}/stream/96">alternate (low-quality)</a></li>
   </ul>
   <p>Listen on any player:</p>
   <ul class="stream-links">
     <li><a href="{{ site.radio.stream_url.hq }}" target="_blank">320 <span class="kbps">kbps</span></a></li>
-    <li><a href="{{ site.radio.stream_url.lq }}" target="_blank">96 <span class="kbps">kbps</span></a></li>
+    <li><a href="{{ site.radio.stream_url.lq }}" target="_blank">128 <span class="kbps">kbps</span></a></li>
   </ul>
 </section>
 
@@ -27,8 +45,8 @@ title: Home
     {% if post.layout == 'logs' %}
     <a href="{{ post.url }}">
       <div class="log-archive-item">
-        {% if page.date %}
-        <time datetime="{{ page.date | date_to_xmlschema }}" class="archive-date">
+        {% if post.date %}
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="archive-date">
           STARDATE
           {% if post.stardate == 0 %}
             ?????
@@ -37,7 +55,7 @@ title: Home
           {% endif %}
         </time>
         {% else %}
-          {% if page.stardate %}
+          {% if post.stardate %}
             <span class="archive-date">
               STARDATE
               {% if post.stardate == 0 %}
@@ -63,7 +81,7 @@ title: Home
   <h1>other shenanigans</h1>
 
   <h2>IRC</h2>
-  <p>To join the IRC chat, connect to <code>moonlightradio.ddns.net:6667</code>, channel <code>#moonlight</code>.</p>
+  <p>Coming soon(?)</p>
 
   {% if site.data.files %}
   <!-- BEGIN files -->
