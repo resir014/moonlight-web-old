@@ -1,5 +1,5 @@
 ---
-category: archived-logs
+category: logs
 layout: logs
 title: "&quot;logs have been banned due to the waste of trees&quot;"
 stardate: 0

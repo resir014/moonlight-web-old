@@ -18,14 +18,7 @@ paginate:
     {% for post in paginator.posts %}
     <a href="{{ post.url }}">
       <div class="log-archive-item">
-        <span class="archive-date">
-          STARDATE
-          {% if post.stardate == 0 %}
-            ?????
-          {% else %}
-            {{ post.stardate }}
-          {% endif %}
-        </span>
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="archive-date">{{ post.date | date_to_string }}</time>
         <span class="archive-title">{{ post.title }}</span>
       </div>
     </a>

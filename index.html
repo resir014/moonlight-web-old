@@ -46,25 +46,7 @@ title: Home
     <a href="{{ post.url }}">
       <div class="log-archive-item">
         {% if post.date %}
-        <time datetime="{{ post.date | date_to_xmlschema }}" class="archive-date">
-          STARDATE
-          {% if post.stardate == 0 %}
-            ?????
-          {% else %}
-            {{ post.stardate }}
-          {% endif %}
-        </time>
-        {% else %}
-          {% if post.stardate %}
-            <span class="archive-date">
-              STARDATE
-              {% if post.stardate == 0 %}
-                ?????
-              {% else %}
-                {{ post.stardate }}
-              {% endif %}
-            </span>
-          {% endif %}
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="archive-date">{{ post.date | date_to_string }}</time>
         {% endif %}
         <span class="archive-title">{{ post.title }}</span>
       </div>
@@ -80,22 +62,5 @@ title: Home
 <section class="home-feature">
   <h1>other shenanigans</h1>
 
-  <h2>IRC</h2>
-  <p>Coming soon(?)</p>
-
-  {% if site.data.files %}
-  <!-- BEGIN files -->
-  <h2>files</h2>
-  <ul class="files">
-    {% for file in site.data.files limit:3 %}
-    <li>
-      <a href="{% if file.url contains 'http://' or file.url contains 'https://' %}{{ file.url }}{% else %}{{ file.url | prepend: site.baseurl }}{% endif %}" target="_blank">
-        {{ file.name }}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-  <a class="btn-more" href="{{ site.baseurl }}/files">view more...</a>
-  <!-- END files -->
-  {% endif %}
+  <p><a href="{{ site.baseurl }}/files">View our file stash</a></p>
 </section>
