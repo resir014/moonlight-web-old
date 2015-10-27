@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     blankslate (2.1.2.4)
-    celluloid (0.16.1)
+    celluloid (0.16.0)
       timers (~> 4.0.0)
     classifier-reborn (2.0.3)
       fast-stemmer (~> 1.0)
@@ -13,8 +13,10 @@ GEM
     colorator (0.1)
     execjs (2.6.0)
     fast-stemmer (1.0.2)
+    ffi (1.9.10)
     ffi (1.9.10-x86-mingw32)
-    hitimes (1.2.2-x86-mingw32)
+    hitimes (1.2.3)
+    hitimes (1.2.3-x86-mingw32)
     jekyll (2.5.3)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -65,12 +67,11 @@ GEM
       hitimes
     toml (0.1.2)
       parslet (~> 1.5.0)
-    wdm (0.1.1)
     yajl-ruby (1.2.1)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
   octopress-paginate
-  wdm (>= 0.1.0)
