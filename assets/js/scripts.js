@@ -24,13 +24,13 @@ setInterval(function() {
       previousSongs.unshift(current_song);
       if (previousSongs.length > 10)
         previousSongs = previousSongs.slice(0, 10);
-      $("#current-track").text(current_song);
+      $("#songtitle").text(current_song);
       var last_played = $("#played").empty();
       for (var song_i in previousSongs)
         $("<li />").text(previousSongs[song_i]).appendTo(last_played);
       currentSong = current_song;
     }
-    $("#current-listeners").text(
+    $("#currentlisteners").text(
       sum(data.icestats.source, function(a) { return a.listeners; }) + "/" +
       sum(data.icestats.source, function(a) { return a.listener_peak; }));
     $("#maxlisteners").text(stream_data.listener_peak);
