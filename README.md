@@ -66,8 +66,8 @@ Deploy process
 NOTE: For now it is *highly recommended* to manually deploy from the server.
 
 ```bash
-# Builds Jekyll site
-$ tasks/deploy-internally
+# Run this command from the server
+$ tasks/deploy
 ```
 
 Special thanks
