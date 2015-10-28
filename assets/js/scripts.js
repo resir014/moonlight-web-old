@@ -31,8 +31,8 @@ setInterval(function() {
       currentSong = current_song;
     }
     $("#currentlisteners").text(
-      sum(data.icestats.source, function(a) { return a.listeners; }) + "/" +
-      sum(data.icestats.source, function(a) { return a.listener_peak; }));
-    $("#maxlisteners").text(stream_data.listener_peak);
+      sum(data.icestats.source, function(a) {return a.listeners; }) + "/" +
+      sum(data.icestats.source, function(a) { return a.listener_peak; })
+    );
   });
 }, 1000);
