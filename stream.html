@@ -11,8 +11,8 @@ permalink: /stream/
       <source id="320" src="{{ site.radio.stream_url.hq }}" type="audio/mpeg">
       <p class="audio-not-supported">Your user agent does not support the HTML5 Audio element.</p>
     </audio>
-    <p>Now Playing: <span data-shoutcast-value="songtitle"></span></p>
-    <p>Listeners: <span data-shoutcast-value="currentlisteners"></span>/<span data-shoutcast-value="maxlisteners"></span></p>
+    <p>Now Playing: <span id="current-track"></span></p>
+    <p>Listeners: <span id="current-listeners"></span></p>
   </div>
   <div class="message">
     <strong>Note:</strong> Some ad-blocking extensions can interfere with the Now Playing data, preventing it to load. For now, the only workaround is to disable your ad blocker.
