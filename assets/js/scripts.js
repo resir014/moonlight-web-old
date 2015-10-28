@@ -24,10 +24,10 @@ setInterval(function() {
       previousSongs.unshift(current_song);
       if (previousSongs.length > 10)
         previousSongs = previousSongs.slice(0, 10);
-      $("#songtitle").text(current_song);
+      $("#songtitle").html(current_song);
       var last_played = $("#played").empty();
       for (var song_i in previousSongs)
-        $("<li />").text(previousSongs[song_i]).appendTo(last_played);
+        $("<li />").html(previousSongs[song_i]).appendTo(last_played);
       currentSong = current_song;
     }
     $("#currentlisteners").text(
