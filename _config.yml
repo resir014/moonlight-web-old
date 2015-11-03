@@ -9,7 +9,7 @@ markdown:             kramdown
 highlighter:          pygments
 
 # Setup
-title:                "MOONLIGHT"
+title:                "Starmoonsunhighblacklight"
 tagline:              "The dark side of STARLIGHT."
 url:                  "http://moonlightradio.ddns.net" # the base hostname & protocol for your site
 baseurl:              "" # the subpath of your site, e.g. "/blog"
