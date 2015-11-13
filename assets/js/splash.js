@@ -3,6 +3,7 @@
  */
 (function() {
   var splash = [
+    "moonlightradio.ddns.net",
     "Like memes? Join MOONLIGHT!",
     "Home of the dankest memes and the angriest sergals.",
     "Better a hole in your moon, than a moon in your hole.",
@@ -20,7 +21,8 @@
     "Nothing but vaporwave and Wolfgun.",
     "God is dead, we have killed him with vaporwave.",
     "Sergals. That is all.",
-    "<+Penumbra> MEMES FUEL THE WORLD"
+    "<+Penumbra> MEMES FUEL THE WORLD",
+    "Everything is possible!"
   ];
   var rand = splash[Math.floor(Math.random() * splash.length)];
   document.getElementById("splash").innerText = rand;
