@@ -22,7 +22,10 @@
     'God is dead, we have killed him with vaporwave.',
     'Sergals. That is all.',
     '<+Penumbra> MEMES FUEL THE WORLD',
-    'Everything is possible!'
+    'Everything is possible!',
+    'Nothing is sacred.',
+    'WHAS THE ?',
+    'Weirdos in big suits.'
   ];
   var rand = splash[Math.floor(Math.random() * splash.length)];
   document.getElementById('splash').innerText = rand;
