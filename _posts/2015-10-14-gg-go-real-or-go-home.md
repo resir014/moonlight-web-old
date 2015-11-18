@@ -15,7 +15,8 @@ title: "\"gg\" (Go Real or Go Home)"
 [15:10:15] <Keon> Pandora loves me
 [15:10:25] <Keon> It's playing Take On Me now c:
 [15:11:10] <Keon_The_Iguana> ROAD TO JUPITER IS GUIDING ME THROUGH THIS GALAXY
-[15:12:10] <Keon> OF MATH PROBLEMS [15:12:20] <Keon_The_Iguana> ONE MORE SECTION
+[15:12:10] <Keon> OF MATH PROBLEMS
+[15:12:20] <Keon_The_Iguana> ONE MORE SECTION
 [15:12:22] <Keon_The_Iguana> BRING IT ON
 [15:12:29] <Keon> GO REAL KEON
 [15:12:38] <Keon_The_Iguana> GO BIG OR GO HOME
