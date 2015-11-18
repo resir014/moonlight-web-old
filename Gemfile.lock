@@ -75,5 +75,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  jekyll (~> 2.5.3)
   octopress-paginate
   wdm (>= 0.1.0)
