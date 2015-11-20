@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
+  "editor.tabSize": "auto",
+  "editor.insertSpaces": "auto",
   "editor.renderWhitespace": true,
   "files.encoding": "utf8",
   "files.trimTrailingWhitespace": true
