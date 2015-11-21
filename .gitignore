@@ -5,6 +5,9 @@ _drafts
 .ruby-version
 .sass-cache
 
+#Gemfile
+Gemfile.lock
+
 # Shared folders
 share
 
