@@ -1,26 +1,26 @@
 moonlightradio.ddns.net
 =======================
 
-The web files for starlight.ddns.net
+> Source code for moonlightradio.ddns.net
 
 Adding stuff
 ------------
 
-All log posts go to the `_posts` directory. The file names should
-go as follows: `yyyy-mm-dd-log-title-here.md`.
+All posts go to the `_posts` directory. The file names should
+go as follows: `yyyy-mm-dd-post-title-here.md`.
 
-The following header is required for logs:
+The following header is required for posts:
 
 ```
 ---
-category: logs
+category: logs # can be `updates` or `logs`
 layout: logs
 title: "Title here"
-stardate: 12031 # optional
+stardate: 12031 # optional, only for log posts
 ---
 ```
 
-Then wrap the logs inside the following Liquid tags:
+To enable syntax highlighting, logs should be placed inside the following Liquid tags:
 
 ```
 {% highlight irc %}
@@ -39,35 +39,30 @@ Requirements:
 * Jekyll <http://jekyllrb.com/>
   (install from within Ruby: `gem install jekyll`)
 
-Clone the project to your local directory.
+Clone it. ( `git clone https://github.com/resir014/moonlight-web.git` )
+
+Then install all the bundled plugins.
 
 ```bash
-$ git clone https://github.com/resir014/moonlight-web.git
+$ bundle install
 ```
 
-Then run this command to install all of the required Jekyll plugins:
+After the plugins are installed, we can now run a local server from within our computer.
 
 ```bash
-$ bundle
+$ bundle exec jekyll serve
 ```
-
-Then we can run a local server from within your computer.
-
-```bash
-$ jekyll serve
-```
-
-It is **highly recommended** to make & commit your changes to your own branch.
-Branch names follow the naming convention of `username/feature-name`.
 
 Deploy process
 --------------
 
-NOTE: For now it is *highly recommended* to manually deploy from the server.
+**NOTE:** The deploy script included in this repository *only* works from within the server! You should ssh into the server and clone the project there before running the deploy script.
+
+To deploy the site, run this command.
 
 ```bash
 # Run this command from the server
-$ tasks/deploy
+$ sudo tasks/deploy
 ```
 
 Special thanks
