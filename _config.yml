@@ -34,7 +34,7 @@ radio:
   stream_url:
     hq:               "http://moonlightradio.ddns.net:8000/stream_320"
     lq:               "http://moonlightradio.ddns.net:8000/stream_128"
-    aq:               "http://moonlightradio.ddns.net:8000/stream_24"
+    aq:               "http://moonlightradio.ddns.net:8000/stream_64"
 
 # List of time zones supported in the TZ database
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
