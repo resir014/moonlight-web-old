@@ -31,9 +31,9 @@ title: Home
   </ul>
   <p>Listen on any player:</p>
   <ul class="stream-links">
-    <li><a href="{{ site.radio.stream_url.hq }}" target="_blank">320 <span class="kbps">kbps</span></a></li>
-    <li><a href="{{ site.radio.stream_url.lq }}" target="_blank">128 <span class="kbps">kbps</span></a></li>
-    <li><a href="{{ site.radio.stream_url.aq }}">６４ <span class="kbps">ｋｂｐｓ</span></a></li>
+    {% for stream in site.radio.stream_url %}
+    <li><a href="{{ stream[1] }}" target="_blank">{{ stream[0] }} <span class="kbps">kbps</span></a></li>
+    {% endfor %}
   </ul>
 </section>
 
