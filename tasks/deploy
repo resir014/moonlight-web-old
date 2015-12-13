@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Script to perform a Jekyll deploy for moonlightradio.ddns.net
+#
 
 # Check if script is run as root.
 if [[ $EUID -ne 0 ]]; then
@@ -23,7 +26,7 @@ fi
 echo -e "\nJekyll build successful."
 
 # Cleans folder permissions
-echo -e "Cleaning file & folder permissions in ${JEKYLL_DEST}...\n"
+echo -e "Cleaning file & folder permissions in ${WWW_ROOT}...\n"
 chown -R www-data:www-data $JEKYLL_DEST
 chmod -R 755 $WWW_ROOT
 
@@ -31,7 +34,7 @@ chmod -R 755 $WWW_ROOT
 RESULT_CHMOD=$?
 if [ $RESULT_CHMOD -ne 0 ]; then
   # Exit if failed
-  echo -e "\nFailed cleaning permissions in ${JEKYLL_DEST}"
+  echo -e "\nFailed cleaning permissions in ${WWW_ROOT}"
   echo -e "You might want to manually chmod/chroot at this point."
   exit 0
 fi
