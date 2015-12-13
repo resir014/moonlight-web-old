@@ -6,7 +6,8 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-JEKYLL_DEST=/var/www/moonlight
+JEKYLL_DEST=/var/www/moonlightradio.ddns.net/public_html
+WWW_ROOT=/var/www
 
 echo -e "Building Jekyll site to ${JEKYLL_DEST}..."
 jekyll build -d $JEKYLL_DEST
@@ -24,7 +25,7 @@ echo -e "\nJekyll build successful."
 # Cleans folder permissions
 echo -e "Cleaning file & folder permissions in ${JEKYLL_DEST}...\n"
 chown -R www-data:www-data $JEKYLL_DEST
-chmod -R 775 $JEKYLL_DEST
+chmod -R 755 $WWW_ROOT
 
 # Test if chown/chmod was succesfull
 RESULT_CHMOD=$?
