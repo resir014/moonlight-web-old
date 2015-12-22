@@ -6,7 +6,7 @@ permalink:            /:categories/:title/
 
 # Build settings
 markdown:             kramdown
-highlighter:          pygments
+highlighter:          rouge
 
 # Setup
 title:                "MOONLIGHT"
@@ -71,4 +71,3 @@ collections:
   hidden_posts:
     output:           true
     permalink:        /:collection/:path/ #can be overriden in the file
-
