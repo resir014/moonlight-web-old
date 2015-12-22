@@ -29,12 +29,12 @@ author:
 
 # MOONLIGHT Radio
 radio:
-  url:                "moonlightradio.ddns.net"
-  port:               8000
+  url:                "moonlightradio.xyz"
+  port:               8080
   stream_url:
-    320:               "http://moonlightradio.ddns.net:8000/stream_320"
-    128:               "http://moonlightradio.ddns.net:8000/stream_128"
-    ６４:               "http://moonlightradio.ddns.net:8000/stream_64"
+    320:               "http://moonlightradio.xyz:8080/stream_320"
+    128:               "http://moonlightradio.xyz:8080/stream_128"
+    ６４:               "http://moonlightradio.xyz:8080/stream_64"
 
 # List of time zones supported in the TZ database
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
