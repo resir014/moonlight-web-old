@@ -11,7 +11,7 @@ highlighter:          rouge
 # Setup
 title:                "MOONLIGHT"
 tagline:              "The dark side of STARLIGHT."
-url:                  "http://moonlightradio.xyz" # the base hostname & protocol for your site
+url:                  "https://moonlightradio.xyz" # the base hostname & protocol for your site
 baseurl:              "" # the subpath of your site, e.g. "/blog"
 exclude:              ["Makefile", "Gruntfile.js", "Gemfile", "README", "LICENSE", "tasks", "node_modules", "package.json"]
 keep_files:           ["share", "uploads", ".htaccess"]
