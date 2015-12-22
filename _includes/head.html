@@ -22,8 +22,11 @@
   {% endif %}
   <meta content="{{ site.tagline }}" property="og:description">
   {% if page.url %}
-    <meta content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" property="og:url">
+    <meta content="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}" property="og:url">
   {% endif %}
+
+  <!-- Canonical link element -->
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,700,700italic">
