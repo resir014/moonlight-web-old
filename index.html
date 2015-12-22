@@ -3,25 +3,6 @@ layout: default
 title: Home
 ---
 
-{% if site.categories.updates %}
-<!-- BEGIN updates -->
-<section class="home-feature">
-  <div class="log-archive">
-    {% for post in site.categories.updates limit:1 %}
-    {% if post.layout == 'post' %}
-    <a href="{{ post.url }}">
-      <div class="message">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}:</time>
-        {{ post.title }}
-      </div>
-    </a>
-    {% endif %}
-    {% endfor %}
-  </div>
-</section>
-<!-- END updates -->
-{% endif %}
-
 <section class="home-feature">
   <h1>radio stream</h1>
 
@@ -58,6 +39,27 @@ title: Home
   <a class="btn-more" href="{{ site.baseurl }}/logs">view more...</a>
 </section>
 <!-- END logs -->
+{% endif %}
+
+{% if site.categories.updates %}
+<!-- BEGIN updates -->
+<section class="home-feature">
+  <h1>latest from: updates</h1>
+  <div class="log-archive">
+    {% for post in site.categories.updates limit:3 %}
+    <a href="{{ post.url }}">
+      <div class="log-archive-item">
+        {% if post.date %}
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="archive-date">{{ post.date | date_to_string }}</time>
+        {% endif %}
+        <span class="archive-title">{{ post.title }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <a class="btn-more" href="{{ site.baseurl }}/logs">view more...</a>
+</section>
+<!-- END updates -->
 {% endif %}
 
 <section class="home-feature">
