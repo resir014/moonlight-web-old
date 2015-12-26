@@ -9,3 +9,82 @@
 @import "poole";
 @import "components";
 @import "third-party";
+
+
+/*
+ * Base structure
+ */
+
+.thanks {
+  width: 100%;
+  height: 100%;
+}
+
+// Extra markup and styles for table-esque vertical and horizontal centering
+.site-wrapper {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%; // For at least Firefox
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Padding for spacing
+.inner {
+  padding: 1rem;
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover hr {
+  max-width: 14rem;
+  margin: 1.5rem auto;
+}
+
+.cover-footer {
+  position: absolute;
+  bottom: 0;
+  border: 0;
+  width: 100%;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  .cover-header {
+    position: fixed;
+    top: 0;
+  }
+  .cover-footer {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-header,
+  .cover-footer,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}

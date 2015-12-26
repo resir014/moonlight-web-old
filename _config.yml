@@ -54,8 +54,6 @@ pagination:
 nav:
   - title: Home
     url: /index.html
-  - title: Stream
-    url: /stream
   - title: Logs
     url: /logs
   - title: Files
